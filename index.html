@@ -3,62 +3,105 @@
 <head>
     <title>Tribal Mangoes</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
     <style>
         body {
             font-family: Arial;
-            text-align: center;
-            background: #fff8e1;
             margin: 0;
+            background: #f5f5f5;
         }
+
         header {
             background: #ff9800;
             color: white;
-            padding: 15px;
-        }
-        .container {
+            text-align: center;
             padding: 20px;
         }
-        .box {
-            border: 1px solid #ddd;
-            padding: 15px;
-            margin: 15px;
-            border-radius: 10px;
-            background: white;
+
+        header img {
+            width: 120px;
+            border-radius: 50%;
         }
-        button {
-            padding: 12px 20px;
+
+        .container {
+            padding: 15px;
+        }
+
+        .product {
+            background: white;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .product img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .product-content {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .price {
+            font-size: 20px;
+            color: #e65100;
+            font-weight: bold;
+        }
+
+        .btn {
+            margin-top: 10px;
+            padding: 12px;
             background: #25D366;
             color: white;
             border: none;
             border-radius: 5px;
+            width: 100%;
             font-size: 16px;
         }
+
+        .btn:hover {
+            background: #1ebe5d;
+        }
+
     </style>
 </head>
 
 <body>
 
 <header>
+    <img src="logo.jpg" alt="Logo">
     <h1>🥭 Tribal Mangoes</h1>
-    <p>Fresh Mangoes Direct from Farm</p>
+    <p>Farm Fresh | Direct Delivery</p>
 </header>
 
 <div class="container">
 
-    <div class="box">
-        <h2>Kesar Mango</h2>
-        <p>₹800 per box</p>
-        <a href="https://wa.me/918780888378?text=I want to order Kesar Mango">
-            <button>Order on WhatsApp</button>
-        </a>
+    <!-- KESAR -->
+    <div class="product">
+        <img src="kesar.jpg" alt="Kesar Mango">
+        <div class="product-content">
+            <h2>Kesar Mango</h2>
+            <p class="price">₹800 per box</p>
+            <a href="https://wa.me/918780888378?text=I want to order Kesar Mango">
+                <button class="btn">Order on WhatsApp</button>
+            </a>
+        </div>
     </div>
 
-    <div class="box">
-        <h2>Alphonso Mango</h2>
-        <p>₹1200 per box</p>
-        <a href="https://wa.me/918780888378?text=I want to order Alphonso Mango">
-            <button>Order on WhatsApp</button>
-        </a>
+    <!-- ALPHONSO -->
+    <div class="product">
+        <img src="alphonso.jpg" alt="Alphonso Mango">
+        <div class="product-content">
+            <h2>Alphonso Mango</h2>
+            <p class="price">₹1200 per box</p>
+            <a href="https://wa.me/918780888378?text=I want to order Alphonso Mango">
+                <button class="btn">Order on WhatsApp</button>
+            </a>
+        </div>
     </div>
 
 </div>
