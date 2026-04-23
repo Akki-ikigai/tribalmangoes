@@ -101,7 +101,78 @@
             color: red;
             font-weight: bold;
         }
-
+        .topbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo-section img {
+            width: 60px;
+            border-radius: 50%;
+        }
+        
+        .logo-section h2 {
+            margin: 0;
+            color: #f57c00;
+        }
+        
+        .logo-section p {
+            margin: 0;
+            font-size: 12px;
+        }
+        
+        .contact {
+            text-align: right;
+        }
+        
+        .contact button {
+            background: #ff6f00;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+        
+        /* HERO */
+        .hero {
+            background: url('banner.jpg') center/cover no-repeat;
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+        
+        .hero h3 {
+            margin: 5px 0;
+            font-style: italic;
+        }
+        
+        .features {
+            margin-top: 10px;
+        }
+        
+        .features span {
+            margin: 0 10px;
+            font-size: 14px;
+        }
         @media(max-width: 768px) {
             .wrapper {
                 flex-direction: column;
