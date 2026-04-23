@@ -179,6 +179,96 @@
                 align-items: center;
             }
         }
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        
+        .card {
+            width: 300px;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+        
+        .slider img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0,0,0,0.4);
+            color: white;
+            border: none;
+            padding: 6px 10px;
+        }
+        
+        .prev { left: 5px; }
+        .next { right: 5px; }
+        
+        .thumbs {
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+            padding: 5px;
+        }
+        
+        .thumbs img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .title {
+            text-align: center;
+            color: white;
+            padding: 8px;
+            font-weight: bold;
+        }
+        
+        .orange { background: #ff7a00; }
+        .green { background: #2e7d32; }
+        .yellow { background: #f9a825; }
+        
+        .content {
+            padding: 10px;
+            font-size: 14px;
+        }
+        
+        .info-box {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+            background: #f1f1f1;
+            font-size: 13px;
+        }
+        
+        .price {
+            text-align: center;
+            font-weight: bold;
+            font-size: 20px;
+            margin: 10px 0;
+        }
+        
+        .btn {
+            display: block;
+            margin: 10px;
+            padding: 12px;
+            text-align: center;
+            background: #25D366;
+            color: white;
+            border-radius: 6px;
+            text-decoration: none;
+        }
     </style>
 </head>
 
@@ -216,7 +306,7 @@
     </div>        
 </body>
 <div class="main">
-<div class="wrapper">
+<div class="container">
 
     <!-- PREMIUM -->
     <div class="card">
@@ -225,13 +315,30 @@
             <button class="nav prev" onclick="slide('p',-1)">❮</button>
             <button class="nav next" onclick="slide('p',1)">❯</button>
         </div>
-        <div class="title">Premium Kesar</div>
-        <div class="content">
-            ✔ Spotless Skin<br>
-            ✔ 200–250 gm
+
+        <!-- THUMBNAILS -->
+        <div class="thumbs">
+            <img src="p1.jpg" onclick="setImg('p',0)">
+            <img src="p2.jpg" onclick="setImg('p',1)">
+            <img src="p3.jpg" onclick="setImg('p',2)">
         </div>
-        <div class="out">Out of stock</div>
-        <a class="btn">Order</a>
+
+        <div class="title orange">Premium Kesar</div>
+
+        <div class="content">
+            ✔ Individually Covered<br>
+            ✔ Naturally Ripened<br>
+            ✔ Spotless Skin
+        </div>
+
+        <div class="info-box">
+            <div>Size<br><b>200–250 gm</b></div>
+            <div>Best For<br><b>Premium Quality</b></div>
+        </div>
+
+        <div class="price orange">₹750 / 5 KG</div>
+
+        <a class="btn">Order on WhatsApp</a>
     </div>
 
     <!-- CLASSIC -->
@@ -241,12 +348,29 @@
             <button class="nav prev" onclick="slide('c',-1)">❮</button>
             <button class="nav next" onclick="slide('c',1)">❯</button>
         </div>
-        <div class="title">Classic Kesar</div>
+
+        <div class="thumbs">
+            <img src="c1.jpg" onclick="setImg('c',0)">
+            <img src="c2.jpg" onclick="setImg('c',1)">
+            <img src="c3.jpg" onclick="setImg('c',2)">
+        </div>
+
+        <div class="title green">Classic Kesar</div>
+
         <div class="content">
             ✔ Naturally Ripened<br>
-            ✔ 210–250 gm
+            ✔ Few Blemishes<br>
+            ✔ Sweet & Juicy
         </div>
-        <a href="https://wa.me/91XXXXXXXXXX?text=I want Classic Kesar" class="btn">Order</a>
+
+        <div class="info-box">
+            <div>Size<br><b>210–250 gm</b></div>
+            <div>Best For<br><b>Family Use</b></div>
+        </div>
+
+        <div class="price green">₹850 / 10 KG</div>
+
+        <a href="https://wa.me/91XXXXXXXXXX?text=I want Classic Kesar" class="btn">Order on WhatsApp</a>
     </div>
 
     <!-- MEDIUM -->
@@ -256,16 +380,31 @@
             <button class="nav prev" onclick="slide('m',-1)">❮</button>
             <button class="nav next" onclick="slide('m',1)">❯</button>
         </div>
-        <div class="title">Medium Kesar</div>
-        <div class="content">
-            ✔ Budget Friendly<br>
-            ✔ 180–210 gm
+
+        <div class="thumbs">
+            <img src="m1.jpg" onclick="setImg('m',0)">
+            <img src="m2.jpg" onclick="setImg('m',1)">
+            <img src="m3.jpg" onclick="setImg('m',2)">
         </div>
-        <div class="out">Out of stock</div>
-        <a class="btn">Order</a>
+
+        <div class="title yellow">Medium Kesar</div>
+
+        <div class="content">
+            ✔ Naturally Ripened<br>
+            ✔ Greenish-Yellow Skin<br>
+            ✔ Great Taste
+        </div>
+
+        <div class="info-box">
+            <div>Size<br><b>180–210 gm</b></div>
+            <div>Best For<br><b>Budget Friendly</b></div>
+        </div>
+
+        <div class="price yellow">₹750 / 10 KG</div>
+
+        <a class="btn">Order on WhatsApp</a>
     </div>
 
-</div>
 </div>
 
 <script>
@@ -281,7 +420,12 @@ function slide(type, step){
     i[type]+=step;
     if(i[type]<0) i[type]=imgs[type].length-1;
     if(i[type]>=imgs[type].length) i[type]=0;
-    document.getElementById(type+"_img").src=imgs[type][i[type]];
+    document.getElementById(type+"_img").src = imgs[type][i[type]];
+}
+
+function setImg(type, index){
+    i[type] = index;
+    document.getElementById(type+"_img").src = imgs[type][index];
 }
 </script>
 
