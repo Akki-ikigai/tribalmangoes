@@ -6,58 +6,60 @@
 
     <style>
         body {
-            font-family: Arial;
             margin: 0;
-            background: #f5f5f5;
+            font-family: Arial;
+            background: #dcdcdc;
         }
 
         header {
-            background: #ff9800;
-            color: white;
+            background: #f7931e;
             text-align: center;
             padding: 15px;
+            color: white;
         }
 
         header img {
-            width: 80px;
+            width: 50px;
             border-radius: 50%;
         }
 
-        .container {
+        .main {
             display: flex;
-            flex-wrap: wrap;
             justify-content: center;
-            padding: 15px;
+            margin-top: 20px;
+        }
+
+        .wrapper {
+            display: flex;
+            gap: 20px;
         }
 
         .card {
-            width: 300px;
+            width: 250px;
             background: white;
-            margin: 10px;
             border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
             overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
 
-        /* IMAGE SLIDER */
         .slider {
             position: relative;
         }
 
         .slider img {
             width: 100%;
-            height: 220px;
+            height: 180px;
             object-fit: cover;
         }
 
-        .prev, .next {
+        .nav {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            background: rgba(0,0,0,0.5);
+            background: rgba(0,0,0,0.4);
             color: white;
             border: none;
-            padding: 8px 12px;
+            padding: 5px 10px;
             cursor: pointer;
         }
 
@@ -65,119 +67,125 @@
         .next { right: 5px; }
 
         .title {
-            background: #ff9800;
+            background: #f7931e;
             color: white;
             text-align: center;
-            padding: 10px;
+            padding: 8px;
             font-weight: bold;
         }
 
-        .details {
-            padding: 15px;
+        .content {
+            padding: 10px;
+            font-size: 14px;
         }
 
         .price {
             text-align: center;
-            font-size: 20px;
+            color: red;
             font-weight: bold;
-            color: #e65100;
         }
 
         .btn {
-            margin: 15px;
-            padding: 12px;
-            width: calc(100% - 30px);
-            background: #25D366;
+            display: block;
+            margin: 10px;
+            padding: 10px;
+            text-align: center;
+            background: #17c964;
             color: white;
-            border: none;
             border-radius: 5px;
+            text-decoration: none;
         }
 
+        .out {
+            text-align: center;
+            color: red;
+            font-weight: bold;
+        }
+
+        @media(max-width: 768px) {
+            .wrapper {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
     </style>
 </head>
 
 <body>
 
 <header>
-    <img src="logo.jpg">
-    <h2>🥭 Tribal Mangoes</h2>
+    <img src="logo.jpg"><br>
+    🥭 Tribal Mangoes
 </header>
 
-<div class="container">
+<div class="main">
+<div class="wrapper">
 
     <!-- PREMIUM -->
     <div class="card">
         <div class="slider">
             <img id="p_img" src="p1.jpg">
-            <button class="prev" onclick="changeImg('p', -1)">❮</button>
-            <button class="next" onclick="changeImg('p', 1)">❯</button>
+            <button class="nav prev" onclick="slide('p',-1)">❮</button>
+            <button class="nav next" onclick="slide('p',1)">❯</button>
         </div>
         <div class="title">Premium Kesar</div>
-        <div class="details">
+        <div class="content">
             ✔ Spotless Skin<br>
             ✔ 200–250 gm
         </div>
-        <div class="price">₹Out of stock</div>
-        <a href="https://wa.me/91XXXXXXXXXX?text=I want Premium Kesar">
-            <button class="btn">Order</button>
-        </a>
+        <div class="out">Out of stock</div>
+        <a class="btn">Order</a>
     </div>
 
     <!-- CLASSIC -->
     <div class="card">
         <div class="slider">
             <img id="c_img" src="c1.jpg">
-            <button class="prev" onclick="changeImg('c', -1)">❮</button>
-            <button class="next" onclick="changeImg('c', 1)">❯</button>
+            <button class="nav prev" onclick="slide('c',-1)">❮</button>
+            <button class="nav next" onclick="slide('c',1)">❯</button>
         </div>
         <div class="title">Classic Kesar</div>
-        <div class="details">
+        <div class="content">
             ✔ Naturally Ripened<br>
             ✔ 210–250 gm
         </div>
-        <div class="price">₹Out of stock</div>
-        <a href="https://wa.me/91XXXXXXXXXX?text=I want Classic Kesar">
-            <button class="btn">Order</button>
-        </a>
+        <a href="https://wa.me/91XXXXXXXXXX?text=I want Classic Kesar" class="btn">Order</a>
     </div>
 
     <!-- MEDIUM -->
     <div class="card">
         <div class="slider">
             <img id="m_img" src="m1.jpg">
-            <button class="prev" onclick="changeImg('m', -1)">❮</button>
-            <button class="next" onclick="changeImg('m', 1)">❯</button>
+            <button class="nav prev" onclick="slide('m',-1)">❮</button>
+            <button class="nav next" onclick="slide('m',1)">❯</button>
         </div>
         <div class="title">Medium Kesar</div>
-        <div class="details">
+        <div class="content">
             ✔ Budget Friendly<br>
             ✔ 180–210 gm
         </div>
-        <div class="price">₹Out of stock</div>
-        <a href="https://wa.me/91XXXXXXXXXX?text=I want Medium Kesar">
-            <button class="btn">Order</button>
-        </a>
+        <div class="out">Out of stock</div>
+        <a class="btn">Order</a>
     </div>
 
 </div>
+</div>
 
 <script>
-    const images = {
-        p: ["p1.jpg", "p2.jpg", "p3.jpg"],
-        c: ["c1.jpg", "c2.jpg", "c3.jpg"],
-        m: ["m1.jpg", "m2.jpg", "m3.jpg"]
-    };
+const imgs = {
+    p: ["p1.jpg","p2.jpg","p3.jpg"],
+    c: ["c1.jpg","c2.jpg","c3.jpg"],
+    m: ["m1.jpg","m2.jpg","m3.jpg"]
+};
 
-    let index = { p: 0, c: 0, m: 0 };
+let i = {p:0,c:0,m:0};
 
-    function changeImg(type, step) {
-        index[type] += step;
-
-        if (index[type] < 0) index[type] = images[type].length - 1;
-        if (index[type] >= images[type].length) index[type] = 0;
-
-        document.getElementById(type + "_img").src = images[type][index[type]];
-    }
+function slide(type, step){
+    i[type]+=step;
+    if(i[type]<0) i[type]=imgs[type].length-1;
+    if(i[type]>=imgs[type].length) i[type]=0;
+    document.getElementById(type+"_img").src=imgs[type][i[type]];
+}
 </script>
 
 </body>
