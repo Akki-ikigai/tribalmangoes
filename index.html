@@ -152,40 +152,80 @@
         }
 
         /* WHY */
-        <div class="why-section">
-            <div class="why-header">
-                <span class="line"></span>
-                <h2>🍃 Why Choose Tribal Mangoes? 🍃</h2>
-                <span class="line"></span>
-            </div>      
-            <div class="why-grid">        
-                <div class="why-card">
-                    <div class="icon green">🌿</div>
-                    <h3>Farm Fresh</h3>
-                    <p>Picked at the right time</p>
-                </div>        
-                <div class="why-card">
-                    <div class="icon green">🧪</div>
-                    <h3>100% Natural</h3>
-                    <p>No chemicals<br>No ripening agents</p>
-                </div>        
-                <div class="why-card">
-                    <div class="icon orange">📦</div>
-                    <h3>Carefully Packed</h3>
-                    <p>Safe packing for long journey</p>
-                </div>        
-                <div class="why-card">
-                    <div class="icon green">🚚</div>
-                    <h3>Fast Delivery</h3>
-                    <p>Delivery in Gujarat & Mumbai</p>
-                </div>        
-                <div class="why-card">
-                    <div class="icon orange">👨‍👩‍👧‍👦</div>
-                    <h3>Customer Trust</h3>
-                    <p>Thousands of happy customers</p>
-                </div>        
-            </div>
-        </div>
+        .why-section {
+            background: #fafafa;
+            text-align: center;
+            padding: 50px 20px;
+        }
+        
+        .why-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+        
+        .why-header h2 {
+            margin: 0;
+            font-size: 22px;
+            font-weight: 600;
+        }
+        
+        .line {
+            width: 60px;
+            height: 2px;
+            background: #f57c00;
+        }
+        
+        /* GRID */
+        .why-grid {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        
+        /* CARD */
+        .why-card {
+            width: 180px;
+        }
+        
+        /* ICON CIRCLE */
+        .icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            margin: auto;
+            margin-bottom: 15px;
+        }
+        
+        /* COLORS */
+        .green {
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+        
+        .orange {
+            background: #fff3e0;
+            color: #f57c00;
+        }
+        
+        /* TEXT */
+        .why-card h3 {
+            margin: 5px 0;
+            font-size: 16px;
+        }
+        
+        .why-card p {
+            font-size: 13px;
+            color: #666;
+            line-height: 1.4;
+        }
         @media(max-width:768px){
             .container { flex-direction: column; align-items: center; }
         }
@@ -292,38 +332,38 @@
 
 <!-- WHY -->
 <div class="why-section">
-    <div class="why-header">
-        <span class="line"></span>
-        <h2>🍃 Why Choose Tribal Mangoes? 🍃</h2>
-        <span class="line"></span>
-    </div>
-    <div class="why-grid">
-        <div class="why-card">
-            <div class="icon green">🌿</div>
-            <h3>Farm Fresh</h3>
-            <p>Picked at the right time</p>
-        </div>
-        <div class="why-card">
-            <div class="icon green">🧪</div>
-            <h3>100% Natural</h3>
-            <p>No chemicals<br>No ripening agents</p>
-        </div>
-        <div class="why-card">
-            <div class="icon orange">📦</div>
-            <h3>Carefully Packed</h3>
-            <p>Safe packing for long journey</p>
-        </div>
-        <div class="why-card">
-            <div class="icon green">🚚</div>
-            <h3>Fast Delivery</h3>
-            <p>Delivery in Gujarat & Mumbai</p>
-        </div>
-        <div class="why-card">
-            <div class="icon orange">👨‍👩‍👧‍👦</div>
-            <h3>Customer Trust</h3>
-            <p>Thousands of happy customers</p>
-        </div>
-    </div>
+            <div class="why-header">
+                <span class="line"></span>
+                <h2>🍃 Why Choose Tribal Mangoes? 🍃</h2>
+                <span class="line"></span>
+            </div>      
+            <div class="why-grid">        
+                <div class="why-card">
+                    <div class="icon green">🌿</div>
+                    <h3>Farm Fresh</h3>
+                    <p>Picked at the right time</p>
+                </div>        
+                <div class="why-card">
+                    <div class="icon green">🧪</div>
+                    <h3>100% Natural</h3>
+                    <p>No chemicals<br>No ripening agents</p>
+                </div>        
+                <div class="why-card">
+                    <div class="icon orange">📦</div>
+                    <h3>Carefully Packed</h3>
+                    <p>Safe packing for long journey</p>
+                </div>        
+                <div class="why-card">
+                    <div class="icon green">🚚</div>
+                    <h3>Fast Delivery</h3>
+                    <p>Delivery in Gujarat & Mumbai</p>
+                </div>        
+                <div class="why-card">
+                    <div class="icon orange">👨‍👩‍👧‍👦</div>
+                    <h3>Customer Trust</h3>
+                    <p>Thousands of happy customers</p>
+                </div>        
+            </div>
 </div>
 
 <!-- FOOTER -->
