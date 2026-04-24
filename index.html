@@ -229,6 +229,80 @@
         @media(max-width:768px){
             .container { flex-direction: column; align-items: center; }
         }
+        /* FOOTER */
+        .footer-top {
+            background: #f5efe6;
+            display: flex;
+            justify-content: space-around;
+            padding: 25px 15px;
+            flex-wrap: wrap;
+            border-top: 1px solid #eee;
+        }
+        
+        .footer-box {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            width: 300px;
+        }
+        
+        .footer-box h4 {
+            margin: 0;
+            font-size: 16px;
+        }
+        
+        .footer-box p {
+            margin: 3px 0;
+            font-size: 14px;
+            color: #555;
+        }
+        
+        .footer-box a {
+            text-decoration: none;
+            color: #2e7d32;
+        }
+        
+        /* ICON STYLE */
+        .icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+        }
+        
+        .orange {
+            background: #ffe0b2;
+            color: #f57c00;
+        }
+        
+        .green {
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+        
+        /* SOCIAL ICONS */
+        .social {
+            margin-top: 5px;
+        }
+        
+        .social a {
+            font-size: 22px;
+            margin-right: 10px;
+            text-decoration: none;
+        }
+        
+        /* BOTTOM BAR */
+        .footer-bottom {
+            background: #f57c00;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+        }
+        
     </style>
 </head>
 
@@ -370,21 +444,39 @@
         </div>
 </div>
 <!-- FOOTER -->
-<div class="contact-footer">
-    <div class="contact-box">
-        📍 <a href="https://maps.app.goo.gl/bJwjh9XBVkG6RTMB6">Location</a>
+<div class="footer-top">
+    <!-- LOCATION -->
+    <div class="footer-box">
+        <div class="icon orange">📍</div>
+        <div>
+            <h4>We Deliver To</h4>
+            <p><a href="https://maps.app.goo.gl/bJwjh9XBVkG6RTMB6" target="_blank">Gujarat & Mumbai</a></p>
+        </div>
     </div>
-    <div class="contact-box">
-        💬 <a href="https://wa.me/918780888378">WhatsApp</a>
+    <!-- WHATSAPP -->
+    <div class="footer-box">
+        <div class="icon green">💬</div>
+        <div>
+            <h4>Have Questions?</h4>
+            <p>Chat with us on WhatsApp</p>
+            <p><a href="https://wa.me/918780888378">+91 8780888378</a></p>
+        </div>
     </div>
-    <div class="contact-box">
-        📱 
-        <a href="https://www.instagram.com/tribalmangoes/">Instagram</a> |
-        <a href="https://www.facebook.com/profile.php?id=61575903120023">Facebook</a>
+    <!-- SOCIAL -->
+    <div class="footer-box">
+        <div>
+            <h4>Follow Us</h4>
+            <p>Stay updated with our latest mangoes</p>
+            <div class="social">
+                <a href="https://www.instagram.com/tribalmangoes/" target="_blank">📷</a>
+                <a href="https://www.facebook.com/profile.php?id=61575903120023" target="_blank">📘</a>
+                <a href="https://wa.me/918780888378">🟢</a>
+            </div>
+        </div>
     </div>
 </div>
-<div class="copyright">
-    © 2024 Tribal Mangoes
+<div class="footer-bottom">
+    © 2026 Tribal Mangoes. All Rights Reserved.
 </div>
 <script>
 const imgs = {
