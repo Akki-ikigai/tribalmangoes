@@ -234,7 +234,7 @@
             background: #f5efe6;
             display: flex;
             justify-content: space-around;
-            padding: 25px 15px;
+            padding: 30px 20px;
             flex-wrap: wrap;
             border-top: 1px solid #eee;
         }
@@ -243,16 +243,17 @@
             display: flex;
             align-items: center;
             gap: 15px;
-            width: 300px;
+            width: 320px;
         }
         
         .footer-box h4 {
             margin: 0;
             font-size: 16px;
+            font-weight: 600;
         }
         
         .footer-box p {
-            margin: 3px 0;
+            margin: 4px 0;
             font-size: 14px;
             color: #555;
         }
@@ -262,15 +263,14 @@
             color: #2e7d32;
         }
         
-        /* ICON STYLE */
+        /* ICON CIRCLE */
         .icon {
-            width: 50px;
-            height: 50px;
+            width: 55px;
+            height: 55px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 22px;
         }
         
         .orange {
@@ -284,22 +284,17 @@
         }
         
         /* SOCIAL ICONS */
-        .social {
-            margin-top: 5px;
-        }
-        
-        .social a {
-            font-size: 22px;
+        .social img {
+            width: 28px;
             margin-right: 10px;
-            text-decoration: none;
         }
         
-        /* BOTTOM BAR */
+        /* FOOTER BAR */
         .footer-bottom {
             background: #f57c00;
             color: white;
             text-align: center;
-            padding: 10px;
+            padding: 12px;
             font-size: 14px;
         }
         
@@ -445,38 +440,71 @@
 </div>
 <!-- FOOTER -->
 <div class="footer-top">
+
     <!-- LOCATION -->
     <div class="footer-box">
-        <div class="icon orange">📍</div>
+        <div class="icon orange">
+            <!-- MAP ICON -->
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 
+                9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/>
+            </svg>
+        </div>
         <div>
             <h4>We Deliver To</h4>
             <p><a href="https://maps.app.goo.gl/bJwjh9XBVkG6RTMB6" target="_blank">Gujarat & Mumbai</a></p>
         </div>
     </div>
+
     <!-- WHATSAPP -->
     <div class="footer-box">
-        <div class="icon green">💬</div>
+        <div class="icon green">
+            <!-- WHATSAPP ICON -->
+            <svg width="24" height="24" viewBox="0 0 32 32" fill="currentColor">
+                <path d="M16 3C9.37 3 4 8.37 4 15c0 2.64.87 5.07 2.34 7.04L5 29l7.2-1.88C14.14 
+                27.73 15.05 28 16 28c6.63 0 12-5.37 12-12S22.63 3 16 3zm0 
+                22c-1.68 0-3.28-.43-4.67-1.2l-.33-.19-4.27 1.11 1.14-4.16-.21-.34A9.94 
+                9.94 0 016 15c0-5.52 4.48-10 10-10s10 4.48 10 10-4.48 10-10 10z"/>
+            </svg>
+        </div>
         <div>
             <h4>Have Questions?</h4>
             <p>Chat with us on WhatsApp</p>
             <p><a href="https://wa.me/918780888378">+91 8780888378</a></p>
         </div>
     </div>
+
     <!-- SOCIAL -->
-    <div class="footer-box">
+    <div class="footer-box social-box">
         <div>
             <h4>Follow Us</h4>
             <p>Stay updated with our latest mangoes</p>
+
             <div class="social">
-                <a href="https://www.instagram.com/tribalmangoes/" target="_blank">📷</a>
-                <a href="https://www.facebook.com/profile.php?id=61575903120023" target="_blank">📘</a>
-                <a href="https://wa.me/918780888378">🟢</a>
+
+                <!-- INSTAGRAM -->
+                <a href="https://www.instagram.com/tribalmangoes/" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
+                </a>
+
+                <!-- FACEBOOK -->
+                <a href="https://www.facebook.com/profile.php?id=61575903120023" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png">
+                </a>
+
+                <!-- WHATSAPP -->
+                <a href="https://wa.me/918780888378">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+                </a>
+
             </div>
         </div>
     </div>
+
 </div>
+
 <div class="footer-bottom">
-    © 2026 Tribal Mangoes. All Rights Reserved.
+    © 2024-26 Tribal Mangoes. All Rights Reserved.
 </div>
 <script>
 const imgs = {
