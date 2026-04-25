@@ -82,7 +82,7 @@
 
         /* HERO */
 		.hero {
-			background: url('banner.jpg') center/cover no-repeat;
+			background: url('banner1.jpg') center/cover no-repeat;
 			height: 260px;
 
 			display: flex;
@@ -453,6 +453,81 @@
 			padding: 8px;
 			cursor: pointer;
 		}
+		.whatsapp-float {
+			position: fixed;
+			bottom: 15px;
+			right: 15px;
+			background: #25D366;
+			color: white;
+			font-size: 22px;
+			padding: 12px;
+			border-radius: 50%;
+			z-index: 1000;
+		}
+		/* ===== MOBILE ONLY ===== */
+		@media (max-width: 768px) {
+			.container {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+
+			.card {
+				width: 90%;
+				margin-bottom: 20px;
+			}		
+			.topbar {
+				flex-direction: column;
+				height: auto;
+				padding: 10px;
+				text-align: center;
+			}
+
+			.logo-section {
+				flex-direction: column;
+				gap: 5px;
+			}
+
+			.logo-section img {
+				width: 80px;
+				top: 10px;
+			}
+			.hero {
+				height: 200px;
+				padding-left: 20px;
+			}
+
+			.hero-content h1 {
+				font-size: 20px;
+			}
+
+			.hero-content h2 {
+				font-size: 16px;
+			}
+
+			.hero-features {
+				flex-direction: column;
+				gap: 5px;
+				font-size: 12px;
+			}
+			.card img {
+				height: auto;
+			}
+			 .btn {
+				width: 90%;
+				font-size: 16px;
+			}
+			 .lightbox img {
+				max-width: 90%;
+			}
+
+			.lb-prev { left: -25px; }
+			.lb-next { right: -25px; }
+			body {
+				background-size: 150px;
+			}
+		}
+		
     </style>
 </head>
 
