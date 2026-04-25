@@ -82,7 +82,7 @@
 
         /* HERO */
 		.hero {
-			background: url('banner.jpg') center/cover no-repeat;
+			background: url('banner1.jpg') center/cover no-repeat;
 			height: 260px;
 
 			display: flex;
@@ -454,15 +454,77 @@
 			cursor: pointer;
 		}
 		.whatsapp-float {
-			position: fixed;
-			bottom: 15px;
-			right: 15px;
-			background: #25D366;
+		position: fixed;
+		bottom: 15px;
+		right: 15px;
+		background: #25D366;
+		color: white;
+		font-size: 22px;
+		padding: 12px;
+		border-radius: 50%;
+		z-index: 1000;
+		}
+		.scroll-banner {
+			position: relative;
+			overflow: hidden;
+
+			background: linear-gradient(90deg, #ff9800, #ff6f00);
 			color: white;
-			font-size: 22px;
-			padding: 12px;
-			border-radius: 50%;
-			z-index: 1000;
+
+			padding: 10px 0;
+			font-weight: 600;
+			font-size: 15px;
+		}
+
+		/* gradient fade edges (premium touch) */
+		.scroll-banner::before,
+		.scroll-banner::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			width: 60px;
+			height: 100%;
+			z-index: 2;
+		}
+
+		.scroll-banner::before {
+			left: 0;
+			background: linear-gradient(to right, #ff9800, transparent);
+		}
+
+		.scroll-banner::after {
+			right: 0;
+			background: linear-gradient(to left, #ff6f00, transparent);
+		}
+
+		/* track */
+		.scroll-track {
+			display: flex;
+			width: max-content;
+			animation: scroll-loop 20s linear infinite;
+		}
+
+		/* content */
+		.scroll-content {
+			text-shadow: 0 0 5px rgba(255,255,255,0.5);
+		}
+
+		/* animation */
+		@keyframes scroll-loop {
+			from { transform: translateX(0); }
+			to { transform: translateX(-50%); }
+		}
+
+		/* pause on hover */
+		.scroll-banner:hover .scroll-track {
+			animation-play-state: paused;
+		}
+		.blink {
+			animation: blink 1s infinite;
+		}
+
+		@keyframes blink {
+			50% { opacity: 0.4; }
 		}
 		/* ===== MOBILE ONLY ===== */
 		@media (max-width: 768px) {
@@ -513,11 +575,11 @@
 			.card img {
 				height: auto;
 			}
-			 .btn {
+			.btn {
 				width: 90%;
 				font-size: 16px;
 			}
-			 .lightbox img {
+			.lightbox img {
 				max-width: 90%;
 			}
 
@@ -525,6 +587,14 @@
 			.lb-next { right: -25px; }
 			body {
 				background-size: 150px;
+			}
+			.scroll-banner {
+				font-size: 13px;
+				padding: 8px 0;
+			}
+
+			.scroll-content {
+				padding: 0 30px;
 			}
 		}
 		
@@ -560,6 +630,16 @@
             <span>✔ 100% Natural</span>
             <span>✔ Chemical Free</span>
             <span>✔ Direct from Farm</span>
+        </div>
+    </div>
+</div>
+<div class="scroll-banner">
+    <div class="scroll-track">
+        <div class="scroll-content">
+            <span class="blink">🔥</span> Prebook your orders!Our 2026 mango batch ready by 10th May 2026. Order early to avoid missing out!
+        </div>
+        <div class="scroll-content">
+            <span class="blink">🔥</span> Prebook your orders!Our 2026 mango batch ready by 10th May 2026. Order early to avoid missing out!
         </div>
     </div>
 </div>
