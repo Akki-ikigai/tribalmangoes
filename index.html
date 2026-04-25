@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 <head>
     <title>Tribal Mangoes</title>
@@ -6,81 +5,143 @@
 
     <style>
         body {
-		    background: linear-gradient(#ffffff 30%, #f5f5f5 100%);
+			margin: 0;
+			font-family: Arial;
+			background:
+			linear-gradient(rgba(255,255,255,0.90), rgba(255,255,255,0.75)),
+			url('banner3.jpg') center no-repeat;
+
+						
+			background-size: 300px;
+			background-repeat: repeat;
 		}
 
         /* HEADER */
         .topbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-            background: white;
-        }
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			height: 100px;
+			padding: 0 30px;
+			background: white;
+
+			position: relative;
+			z-index: 10;   /* 👈 IMPORTANT */
+		}
 
         .logo-section {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
+			display: flex;
+			align-items: center;
+			gap: 50px;   /* move text right */
+		}
 
         .logo-section img {
-            width: 60px;
-            border-radius: 50%;
-        }
+			width: 200px;                 /* bigger logo */
+			border-radius: 50%;
+
+			position: relative;
+			top: 60px;                   /* overlap into banner */
+
+			background: white;
+			padding: 4px;
+
+			box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+		}
 
         .logo-section h2 {
-            margin: 0;
-            color: #f57c00;
-        }
+			margin: 0;
+			color: #f57c00;
+
+			font-size: 40px;        /* bigger text */
+			font-weight: 1000;       /* bold */
+			letter-spacing: 5px;    /* spacing between letters */
+
+			line-height: 1.2;
+		}
+		
+		.logo-section p {
+			margin: 2px 0 0 0;
+
+			font-size: 20px;
+			color: #f57c00;            /* darker = more visible */
+
+			font-weight: 500;
+			letter-spacing: 5px;  /* slight spacing */
+
+			opacity: 1;             /* full brightness */
+		}
 
         .contact button {
             background: #ff6f00;
+			font-size: 20px;
             color: white;
             border: none;
-            padding: 8px 15px;
+            padding: 20px 50px;
             border-radius: 5px;
         }
 
         /* HERO */
-        .hero {
-		    background: url('banner.png') center/cover no-repeat;
-		    width: 100%;
-		    height: 320px;   /* increase from 250 */
-		    display: flex;
-		    align-items: center;
-		    justify-content: center;
-		    color: white;
-		    text-align: center;
+		.hero {
+			background: url('banner1.jpg') center/cover no-repeat;
+			height: 260px;
+
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;   /* LEFT ALIGN */
+
+			padding-left: 500px;
+			color: white;
+			position: relative;
+		}
+		.hero-content h1 {
+			margin: 0;
+			font-size: 50px;
+			font-weight: 700;
+		}
+
+		.hero-content h2 {
+			margin: 5px 0 15px 0;
+			font-size: 30px;
+			font-style: italic;
+			color: #ffd54f;   /* yellow like screenshot */
+		}
+
+		/* FEATURES */
+		.hero-features {
+			display: flex;
+			gap: 20px;
+			font-size: 14px;
+		}
+
+		.hero-features span {
+			display: flex;
+			align-items: center;
+			gap: 5px;
 		}
 		.hero::before {
-		    content: "";
-		    position: absolute;
-		    width: 100%;
-		    height: 320px;
-		    background: rgba(0,0,0,0.3);
+			content: "";
+			position: absolute;
+			inset: 0;
+			background: rgba(0,0,0,0.35);
 		}
-		.hero {
-		    position: relative;
-		}
-		
-		.hero h1 {
-		    position: relative;
-		    z-index: 1;
+
+		.hero-content {
+			position: relative;
+			z-index: 1;
 		}
 
         /* PRODUCTS */
         .container {
-		    margin-top: -80px;   /* pulls cards into banner */
-		    display: flex;
-		    justify-content: center;
-		    gap: 20px;
-		    padding: 20px;
-		    flex-wrap: wrap;
-		}
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            flex-wrap: wrap;
+        }
 
         .card {
-            width: 300px;
+			font-size: 20px;
+            width: 350px;
             background: white;
             border-radius: 12px;
             overflow: hidden;
@@ -208,8 +269,8 @@
         
         /* ICON CIRCLE */
         .icon {
-            width: 80px;
-            height: 80px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -232,14 +293,14 @@
         
         /* TEXT */
         .why-card h3 {
-            margin: 5px 0;
-            font-size: 16px;
+            margin: 10px 0;
+            font-size: 20px;
         }
         
         .why-card p {
-            font-size: 13px;
+            font-size: 16px;
             color: #666;
-            line-height: 1.4;
+            line-height: 1.2;
         }
         @media(max-width:768px){
             .container { flex-direction: column; align-items: center; }
@@ -319,6 +380,79 @@
         .footer-top {
             box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
         }
+		/* center wrapper */
+		.lightbox {
+			display: none;   /* keep hidden initially */
+			position: fixed;
+			z-index: 999;
+			inset: 0;
+			background: rgba(0,0,0,0.15);
+
+			justify-content: center;
+			align-items: center;
+		}
+
+		/* THIS IS KEY */
+		.lightbox-content {
+			position: relative;
+			display: inline-block;
+		}
+
+		/* image */
+		.lightbox img {
+			max-width: 600px;
+			max-height: 100vh;
+			border-radius: 12px;
+			background: white;
+			padding: 8px;
+		}
+
+		/* CLOSE button attached to image */
+		.close {
+			position: absolute;
+			top: -10px;
+			right: -10px;
+
+			background: white;
+			width: 32px;
+			height: 32px;
+			border-radius: 50%;
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			cursor: pointer;
+			font-size: 18px;
+		}
+
+		/* LEFT arrow beside image */
+		.lb-prev {
+			position: absolute;
+			top: 50%;
+			left: -40px;
+			transform: translateY(-50%);
+
+			background: rgba(0,0,0,0.5);
+			color: white;
+			border: none;
+			padding: 8px;
+			cursor: pointer;
+		}
+
+		/* RIGHT arrow beside image */
+		.lb-next {
+			position: absolute;
+			top: 50%;
+			right: -40px;
+			transform: translateY(-50%);
+
+			background: rgba(0,0,0,0.5);
+			color: white;
+			border: none;
+			padding: 8px;
+			cursor: pointer;
+		}
     </style>
 </head>
 
@@ -343,9 +477,17 @@
 
 <!-- HERO -->
 <div class="hero">
-    <h1>Farm Fresh Mangoes</h1>
-</div>
+    <div class="hero-content">
+        <h1>Farm Fresh Mangoes</h1>
+        <h2>Sweetness You Can Trust!</h2>
 
+        <div class="hero-features">
+            <span>✔ 100% Natural</span>
+            <span>✔ Chemical Free</span>
+            <span>✔ Direct from Farm</span>
+        </div>
+    </div>
+</div>
 <!-- PRODUCTS -->
 <div class="container">
 
@@ -353,7 +495,7 @@
     <div class="card">
         <div class="title orange">Premium Kesar</div>
         <div class="slider">
-            <img id="p_img" src="p1.jpg">
+            <img id="p_img" src="p1.jpg" onclick="openLightbox('p')">
             <button class="nav prev" onclick="slide('p',-1)">❮</button>
             <button class="nav next" onclick="slide('p',1)">❯</button>
         </div>
@@ -379,7 +521,7 @@
     <div class="card">
         <div class="title green">Classic Kesar</div>
         <div class="slider">
-            <img id="c_img" src="c1.jpg">
+            <img id="c_img" src="c1.jpg" onclick="openLightbox('c')">
             <button class="nav prev" onclick="slide('c',-1)">❮</button>
             <button class="nav next" onclick="slide('c',1)">❯</button>
         </div>
@@ -406,7 +548,7 @@
     <div class="card">
         <div class="title yellow">Medium Kesar</div>
         <div class="slider">
-            <img id="m_img" src="m1.jpg">
+            <img id="m_img" src="m1.jpg" onclick="openLightbox('m')">
             <button class="nav prev" onclick="slide('m',-1)">❮</button>
             <button class="nav next" onclick="slide('m',1)">❯</button>
         </div>
@@ -534,7 +676,21 @@
 </div>
 
 <div class="footer-bottom">
-    © 2024-26 Tribal Mangoes. All Rights Reserved.
+    © 2024-2026 Tribal Mangoes. All Rights Reserved.
+</div>
+
+<div id="lightbox" class="lightbox">
+    <div class="lightbox-content">
+
+        <span class="close" onclick="closeLightbox()">×</span>
+
+        <button class="lb-prev" onclick="lbSlide(-1)">❮</button>
+
+        <img id="lightbox-img">
+
+        <button class="lb-next" onclick="lbSlide(1)">❯</button>
+
+    </div>
 </div>
 <script>
 const imgs = {
@@ -545,6 +701,7 @@ const imgs = {
 
 let i = {p:0,c:0,m:0};
 
+// normal slider
 function slide(type, step){
     i[type]+=step;
     if(i[type]<0) i[type]=imgs[type].length-1;
@@ -552,9 +709,34 @@ function slide(type, step){
     document.getElementById(type+"_img").src = imgs[type][i[type]];
 }
 
+// thumbnail click
 function setImg(type, index){
     i[type] = index;
     document.getElementById(type+"_img").src = imgs[type][index];
+}
+
+// ===== LIGHTBOX =====
+let currentType = "p";
+
+function openLightbox(type){
+    currentType = type;
+    document.getElementById("lightbox").style.display = "flex";
+    updateLightbox();
+}
+
+function closeLightbox(){
+    document.getElementById("lightbox").style.display = "none";
+}
+
+function lbSlide(step){
+    i[currentType]+=step;
+    if(i[currentType]<0) i[currentType]=imgs[currentType].length-1;
+    if(i[currentType]>=imgs[currentType].length) i[currentType]=0;
+    updateLightbox();
+}
+
+function updateLightbox(){
+    document.getElementById("lightbox-img").src = imgs[currentType][i[currentType]];
 }
 </script>
 
