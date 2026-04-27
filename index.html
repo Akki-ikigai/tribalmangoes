@@ -82,7 +82,7 @@
 
         /* HERO */
 		.hero {
-			background: url('banner.jpg') center/cover no-repeat;
+			background: url('banner1.jpg') center/cover no-repeat;
 			height: 260px;
 
 			display: flex;
@@ -630,7 +630,7 @@
             <span>✔ 100% Natural</span>
             <span>✔ Chemical Free</span>
             <span>✔ Direct from Farm</span>
-        </div>
+        </div> B
     </div>
 </div>
 <div class="scroll-banner">
@@ -645,8 +645,9 @@
 </div>
 <!-- PRODUCTS -->
 <div class="container">
-	<!-- SUPER PREMIUM -->
-	<div class="card">
+
+    <!-- SUPER PREMIUM -->
+    <div class="card">
         <div class="title green">Super premium Kesar</div>
         <div class="slider">
             <img id="s_img" src="s1.jpg" onclick="openLightbox('s')">
@@ -670,7 +671,7 @@
         </div>
         <div class="price yellow">₹Pre-order now /9 KG</div>
 		<a href="https://wa.me/918780888378" class="btn">Order on Whattsapp</a>
-    </div>	
+    </div>
     <!-- PREMIUM -->
     <div class="card">
         <div class="title orange">Premium Kesar</div>
@@ -874,12 +875,13 @@
 </div>
 <script>
 const imgs = {
+    s: ["s1.jpg","s2.jpg","s3.jpg"],
     p: ["p1.jpg","p2.jpg","p3.jpg"],
     c: ["c1.jpg","c2.jpg","c3.jpg"],
     m: ["m1.jpg","m2.jpg","m3.jpg"]
 };
 
-let i = {p:0,c:0,m:0};
+let i = {s:0,p:0,c:0,m:0};
 
 // normal slider
 function slide(type, step){
