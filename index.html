@@ -9,7 +9,9 @@
 			font-family: Arial;
 			background:
 			linear-gradient(rgba(255,255,255,0.90), rgba(255,255,255,0.75)),
-			url('banner3.jpg') center no-repeat;						
+			url('banner3.jpg') center no-repeat;
+
+						
 			background-size: 300px;
 			background-repeat: repeat;
 		}
@@ -24,7 +26,7 @@
 			background: white;
 
 			position: relative;
-			z-index: 10;  
+			z-index: 10;   /* 👈 IMPORTANT */
 		}
 
         .logo-section {
@@ -80,7 +82,7 @@
 
         /* HERO */
 		.hero {
-			background: url('banner.jpg') center/cover no-repeat;
+			background: url('banner1.jpg') center/cover no-repeat;
 			height: 260px;
 
 			display: flex;
@@ -145,7 +147,11 @@
             overflow: hidden;
             box-shadow: 0 6px 20px rgba(0,0,0,0.15);
         }
-
+		
+		.card img {
+			height: 230px;
+			object-fit: cover;
+		}
         .slider {
             position: relative;
         }
@@ -641,10 +647,12 @@
         </div>
     </div>
 </div>
+<div style="text-align:center; margin:10px; font-size:14px;">
+	<span class="blink">⭐ 250+ Happy Customers for 2025 year| Farm Direct Delivery</span>
+</div>
 <!-- PRODUCTS -->
 <div class="container">
-
-    <!-- SUPER PREMIUM -->
+	<!-- SUPER PREMIUM -->
     <div class="card">
         <div class="title green">Super premium Kesar</div>
         <div class="slider">
@@ -664,14 +672,19 @@
 			✔ Specially packed <br>
 		</div>
 		<div class="info-box">
-            <div>Size<br><b>300-330 grms</b></div>
+            <div>Size<br><b>300-350 grms</b></div>
             <div>Best For<br><b>Super premium</b></div>
         </div>
         <div class="price yellow">₹Pre-order now /9 KG</div>
-		<a href="https://wa.me/918780888378" class="btn">Order on Whattsapp</a>
+		<a href="https://wa.me/918780888378?text=Hi%20I%20want%20to%20prebook%20Superpremium%20Kesar%20Mangoes%209KG" class="btn">
+			Order Now on WhatsApp
+		</a>
     </div>
     <!-- PREMIUM -->
     <div class="card">
+		<div style="position:absolute; top:10px; right:10px; background:#ff5722; color:white; padding:3px 8px; font-size:12px; border-radius:5px;">
+		🔥 Most Popular
+		</div>
         <div class="title orange">Premium Kesar</div>
         <div class="slider">
             <img id="p_img" src="p1.jpg" onclick="openLightbox('p')">
@@ -694,7 +707,9 @@
             <div>Best For<br><b>Taste premium</b></div>
         </div>
         <div class="price yellow">₹Pre-order now /10 KG</div>
-		<a href="https://wa.me/918780888378" class="btn">Order on Whattsapp</a>
+		<a href="https://wa.me/918780888378?text=Hi%20I%20want%20to%20prebook%20Premium%20Kesar%20Mangoes%2010KG" class="btn">
+			Order Now on WhatsApp
+		</a>
     </div>
     <!-- CLASSIC -->
     <div class="card">
@@ -721,7 +736,9 @@
             <div>Best For<br><b>Fully Juicy</b></div>
         </div>
 		<div class="price yellow">₹Pre-order now /10 KG</div>
-        <a href="https://wa.me/918780888378" class="btn">Order on Whattsapp</a>
+                <a href="https://wa.me/918780888378?text=Hi%20I%20want%20to%20prebook%20Classic%20Kesar%20Mangoes%2010KG" class="btn">
+					Order Now on WhatsApp
+				</a>
     </div>
     <!-- MEDIUM -->
     <div class="card">
@@ -746,7 +763,9 @@
             <div>Best For<br><b>Family Friendly</b></div>
         </div>    
         <div class="price yellow">₹Pre-order now /10 KG</div>
-        <a href="https://wa.me/918780888378" class="btn">Order on Whattsapp</a>
+        <a href="https://wa.me/918780888378?text=Hi%20I%20want%20to%20prebook%20Medium%20Kesar%20Mangoes%2010KG" class="btn">
+	Order Now on WhatsApp
+		</a>
     </div>
 </div>
 
